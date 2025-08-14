@@ -1,6 +1,6 @@
 # AutoBot - Cold Email Automation Platform
 
-A beautiful, AI-powered web application for automating cold email campaigns for job applications. Built with Next.js, TypeScript, Tailwind CSS, and powered by Google's Gemini AI.
+A beautiful, AI-powered web application for automating cold email campaigns for job applications. Built with Next.js, TypeScript, Tailwind CSS, and powered by Google's Gemini AI. This is a standard Next.js application that can be deployed to any platform.
 
 ## 🚀 Features
 
@@ -215,6 +215,44 @@ If contact/resume extraction fails:
 1. Check the browser console for error messages
 2. Restart the development server: `npm run dev`
 3. Clear browser cache and try again
+
+## 🚀 Deployment
+
+This is a standard Next.js application that can be deployed to any platform:
+
+### Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel --prod
+```
+
+### Netlify
+```bash
+npm run build
+# Upload the .next folder to Netlify
+```
+
+### Railway
+```bash
+# Connect your GitHub repository to Railway
+# Railway will automatically detect Next.js and deploy
+```
+
+### Docker
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+### Environment Variables
+Make sure to set these environment variables in your deployment platform:
+- `NEXT_PUBLIC_GEMINI_API_KEY`: Your Google Gemini API key
 
 ## 🔮 Future Enhancements
 

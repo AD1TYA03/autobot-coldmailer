@@ -6,25 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "deploy:staging": "npm run build && wrangler deploy --env staging",
-    "deploy:production": "npm run build && wrangler deploy --env production",
-    "dev:cf": "wrangler dev --local",
-    "dev:cf:remote": "wrangler dev --remote",
-    "tail": "wrangler tail",
-    "secret:set": "wrangler secret put",
-    "kv:create": "wrangler kv:namespace create",
-    "r2:create": "wrangler r2 bucket create",
-    "analytics:create": "wrangler analytics-engine dataset create"
+    "lint": "next lint"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@headlessui/react": "^2.2.7",
     "@heroicons/react": "^2.2.0",
-    "@opennextjs/cloudflare": "^1.6.5",
     "@types/multer": "^2.0.0",
     "@types/nodemailer": "^6.4.17",
     "clsx": "^2.1.1",
@@ -47,8 +34,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "vercel": "^45.0.9",
-    "wrangler": "^4.29.1"
+    "typescript": "^5"
   }
 }

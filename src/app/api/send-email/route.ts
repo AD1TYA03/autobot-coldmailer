@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter for Vercel (no Cloudflare restrictions)
+    // Create transporter with standard Gmail settings
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       host: 'smtp.gmail.com',
