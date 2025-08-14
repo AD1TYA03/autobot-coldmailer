@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"lib/pdfParser.ts -> pdfjs-dist":{"id":3824,"files":["static/chunks/9b0008ae.cbed462da057ddd0.js","static/chunks/641.f6ef68ffe5d9d99d.js"]},"lib/pdfParser.ts -> tesseract.js":{"id":9442,"files":["static/chunks/442.a88c88010fa07885.js"]}}';

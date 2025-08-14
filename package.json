@@ -3,25 +3,52 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "deploy:staging": "npm run build && wrangler deploy --env staging",
+    "deploy:production": "npm run build && wrangler deploy --env production",
+    "dev:cf": "wrangler dev --local",
+    "dev:cf:remote": "wrangler dev --remote",
+    "tail": "wrangler tail",
+    "secret:set": "wrangler secret put",
+    "kv:create": "wrangler kv:namespace create",
+    "r2:create": "wrangler r2 bucket create",
+    "analytics:create": "wrangler analytics-engine dataset create"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@headlessui/react": "^2.2.7",
+    "@heroicons/react": "^2.2.0",
+    "@opennextjs/cloudflare": "^1.6.5",
+    "@types/multer": "^2.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.539.0",
+    "multer": "^2.0.2",
+    "next": "15.4.6",
+    "nodemailer": "^7.0.5",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.4.54",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.6"
+    "tesseract.js": "^6.0.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vercel": "^45.0.9",
+    "wrangler": "^4.29.1"
   }
 }

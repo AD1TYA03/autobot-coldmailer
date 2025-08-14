@@ -1,0 +1,8 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/parse-contacts/route": "/api/parse-contacts",
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/parse-resume/route": "/api/parse-resume",
+  "/api/send-email/route": "/api/send-email",
+  "/page": "/"
+}
